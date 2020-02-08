@@ -1,4 +1,4 @@
-""" define the IntervalIndex """
+""" Define the IntervalIndex. """
 from operator import le, lt
 import textwrap
 from typing import Any, Optional, Tuple, Union
@@ -727,7 +727,7 @@ class IntervalIndex(IntervalMixin, ExtensionIndex, accessor.PandasDelegate):
         # list-like are invalid labels for II but in some cases may work, e.g
         # single element array of comparable type, so guard against them early
         if is_list_like(key):
-            raise KeyError(key)
+            raise KeyError(key)     
 
         if isinstance(key, Interval):
             if self.closed != key.closed:
